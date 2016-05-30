@@ -1,5 +1,5 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "library/library",
     "license": "MIT",
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
@@ -7,6 +7,14 @@
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
+	"authors": [
+		{
+			"name": "Alberto Gonzalez",
+			"email": "agonzalez@summa.es",
+			"role": "Developer"
+		}
+	],
+
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
