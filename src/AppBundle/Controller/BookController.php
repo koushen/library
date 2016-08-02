@@ -17,7 +17,7 @@ class BookController
      *
      * * @Route(
      *       path     = "/book/{book_id}",
-     *       defaults = { "book" = "1001" }
+     *       defaults = { "book_id" = "1001" }
      * )
      */
     public function indexAction($book_id)
