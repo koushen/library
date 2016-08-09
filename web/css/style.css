@@ -1,4 +1,10 @@
+body{
+    padding-bottom: 50px;
+}
 .thumbnail > img {
     height: 300px;
 }
-
+footer{
+    padding:10px;
+    padding-right: 50px;
+}
