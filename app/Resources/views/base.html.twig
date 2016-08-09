@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% set contact_email = 'formacion@imaginagroup.com' %}
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -13,7 +14,7 @@
     <body>
         {% block body %}<header class="col-md-offset-4 col-md-4">WELCOME TO YOUR LIBRARY</header>{% endblock %}
 
-        {% block footer %}<footer class="footer navbar-fixed-bottom" style="height: 20px; background-color: #2b669a; color: #fff;"><h4>Aqui debe de ir el contact_email</h4></footer>{% endblock %}
+        {% block footer %}<footer class="footer navbar-fixed-bottom" style="height: 50px; background-color: #2b669a; color: #fff;"><h4>Contacto: {{ contact_email }}</h4></footer>{% endblock %}
         {% block javascripts %}
             <script src="{{ asset('js/jquery.min.js') }}"></script>
 
