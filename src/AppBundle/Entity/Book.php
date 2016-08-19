@@ -3,6 +3,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Book
@@ -69,8 +71,6 @@ class Book
      * @ORM\Column(name="ubicacion", type="string", length=255)
      */
     private $ubicacion;
-
-
     /**
      * Get id
      *
@@ -248,5 +248,6 @@ class Book
     {
         return $this->ubicacion;
     }
+
 }
 
