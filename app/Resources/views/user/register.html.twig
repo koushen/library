@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ parent() }}
 
     {{ form_start(form, {'attr' : {'id' : 'user-create'}}) }}
     {{ form_errors(form) }}
     {{ form_row(form._token) }}
+    <div class="page-header">
+        <h2>Registrate</h2>
+    </div>
     <ul>
         <li>
             {{ form_label(form.username) }} :
