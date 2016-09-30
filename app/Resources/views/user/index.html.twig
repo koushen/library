@@ -3,10 +3,8 @@
 {% block body %}
     {{ parent() }}
     <div class="container">
-        <a href="{{ url('user_new') }}" class="pull-right"> Add new user
-            <span role="button" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </a>
-        <div class="page-header">
+
+        <div class="page-header" style="padding-top: 30px">
             <h2>Users</h2>
         </div>
         <table class="table table-striped">
@@ -48,10 +46,10 @@
                 </tr>
             {% endfor %}
         </table>
+        <a href="{{ url('user_new') }}" class="pull-right"> Add new user
+            <span role="button" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </a>
     </div>
-    {% block navbar %}
-        {{parent()}}
 
-    {% endblock %}
 
 {% endblock %}

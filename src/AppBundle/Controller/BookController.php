@@ -38,7 +38,7 @@ class BookController extends Controller
     }
     /**
      *
-     * * @Route("/newbook"
+     * * @Route("/newbook", name="book_new"
      *
      * )
      */
@@ -82,5 +82,19 @@ class BookController extends Controller
             'form' => $form->createView(),
         ));
     }
+
+    /**
+     * @Route("/books/", name="gallery")
+     *
+     */
+    public function booksAction(Request $request)
+    {
+        $books = $this->getDoctrine()
+            ->getRepository('AppBundle:Book')
+            ->findAll();
+
+        return $this->render('books/list.html.twig', array('books' => $books));
+    }
+
 }
 

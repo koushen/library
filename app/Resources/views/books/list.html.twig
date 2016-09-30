@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {{ parent() }}
+    <!-- /.container -->
+    <div class="container">
+
+        <div class="page-header" style="padding-top: 30px">
+            <h2>Books</h2>
+        </div>
+        <table class="table table-striped">
+            <tr>
+                <th>{{ 'Name'|trans }}</th>
+                <th>{{ 'Autor'|trans }}</th>
+
+            </tr>
+            {% for book in books %}
+                <tr>
+
+                    <td>
+                        {{ book.titulo }}
+                    </td>
+                    <td>
+                        {{ book.autor }}
+                    </td>
+
+                </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url('book_new') }}" class="pull-right" >  {{ 'New book'|trans }}
+            <span role="button" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </a>
+    </div>
+    {% block navbar %}
+        {{parent()}}
+
+    {% endblock %}
+
+{% endblock %}
+
+

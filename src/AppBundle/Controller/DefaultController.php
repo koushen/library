@@ -23,7 +23,7 @@ class DefaultController extends Controller
         $logger->info('Se inicia nuestra aplicación de biblioteca "library"');
 
 
-        return $this->render('default/index.html.twig', array(
+        return $this->render('default/home.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         ));
     }
